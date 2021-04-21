@@ -1,0 +1,21 @@
+namespace: moreati
+name: pathlib
+version: 0.0.1
+readme: README.md
+
+authors:
+  - Alex Willmer <alex@moreati.org.uk>
+
+description: Filters to expose Python pathlib module
+
+license:
+  - Apache-2.0
+
+tags:
+  - path
+  - pathlib
+  - posixpath
+  - windowspath
+
+repository: http://github.com/moreati/ansible-pathlib
+issues: http://github.com/moreati/ansible-pathlib/issues

@@ -1,0 +1,20 @@
+---
+- name: Demonstrate pathlib filter plugins
+  hosts: localhost
+  tasks:
+    - name: Show components of path
+      vars:
+        a_path: /foo/bar/pkg-1.2.3.tar.gz
+      debug:
+        msg:
+          path: "{{ a_path | moreati.pathlib.path }}"
+          path.parts: "{{ (a_path | moreati.pathlib.path).parts | list }}"
+          path.anchor: "{{ (a_path | moreati.pathlib.path).anchor }}"
+          path.parents: "{{ (a_path | moreati.pathlib.path).parents | list }}"
+          path.parent: "{{ (a_path | moreati.pathlib.path).parent }}"
+          path.name: "{{ (a_path | moreati.pathlib.path).name }}"
+          path.suffix: "{{ (a_path | moreati.pathlib.path).suffix }}"
+          path.suffixes: "{{ (a_path | moreati.pathlib.path).suffixes }}"
+          path.stem: "{{ (a_path | moreati.pathlib.path).stem }}"
+          path.as_uri(): "{{ (a_path | moreati.pathlib.path).as_uri() }}"
+          path.is_absolute(): "{{ (a_path | moreati.pathlib.path).is_absolute() }}"
